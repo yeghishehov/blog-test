@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import {Stories} from './components/Stories';
+import logo from './assets/logo-desktop.svg';
+import userImage from './assets/user.png';
+import classes from './App.module.scss';
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div>
+      <header className={classes.headerWrapper}>
+        <div className={classes.header}>
+          <img src={logo} className={classes.logo} alt="logo" />
+          <img src={userImage} className={classes.userImage} alt="userImage" />
+        </div>
       </header>
+      <main className={classes.mainWrapper}>
+        <div className={classes.main}>
+          <h1 className={classes.title}>Watchlist Name</h1>
+          <Stories />
+        </div>
+      </main>
     </div>
   );
 }
-
-export default App;
