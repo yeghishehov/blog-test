@@ -1,6 +1,6 @@
-import { useEffect, useState } from 'react';
-import { StoryItem } from '../StoryItem';
-import { getAllStories } from '../../api'
+import { useEffect, useState } from "react";
+import { StoryItem } from "../StoryItem";
+import { getAllStories } from "../../api";
 // import classes from './Stories.module.scss';
 
 export default function Stories() {
@@ -9,7 +9,7 @@ export default function Stories() {
   const getData = async () => {
     const stories = await getAllStories();
     setData(stories);
-  }
+  };
 
   useEffect(() => {
     getData();
@@ -17,9 +17,9 @@ export default function Stories() {
 
   return (
     <div>
-     {data.map((story) => (
-       <StoryItem key={story.id} story={story} /> 
-     ))}
+      {data.map((story) => (
+        <StoryItem key={story.id} story={story} />
+      ))}
     </div>
   );
 }

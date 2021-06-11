@@ -1,1 +1,1 @@
-export {default as getAllStories} from './api';
+export { default as getAllStories } from "./api";
