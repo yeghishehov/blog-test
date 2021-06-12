@@ -1,88 +1,120 @@
 @import "./../../styles/global.scss";
 
-.containerStory {
-  display: flex;
-  justify-content: space-between;
-  background-color: white;
-  margin-top: 18px;
-  align-items: stretch;
-  padding-right: 10px;
-  box-sizing: border-box;
+.root {
+  border: solid 1px #e0e0e0;
   width: 100%;
-  .storyImage {
-    width: 7.5%;
-    object-fit: cover;
-    margin-right: 20px;
-  }
-  .storyContent {
+  box-sizing: border-box;
+  margin-top: 18px;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  .containerStory {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    background-color: white;
+    align-items: stretch;
+    padding-right: 10px;
+    box-sizing: border-box;
     width: 100%;
-    .storyTitle {
-      font-family: Lato;
-      font-size: 16px;
-      font-weight: normal;
-      font-stretch: normal;
-      font-style: normal;
-      line-height: 1.5;
-      letter-spacing: normal;
-      color: rgb(0, 0, 0);
+    .storyImage {
+      width: 7.5%;
+      object-fit: cover;
+      margin-right: 20px;
     }
-    .authorContainer {
+    .storyImageNull {
+      width: 9%;
+      margin-right: 20px;
+    }
+    .storyContent {
       display: flex;
-      align-items: center;
-      .authorImage {
-        width: 25px;
-        height: 25px;
-        margin-right: 10px;
-      }
-      .authorInfo { 
-        margin-right: 20px;
+      flex-direction: column;
+      width: 100%;
+      .storyTitle {
+        width: fit-content;
         font-family: Lato;
-        font-size: 12px;
+        font-size: 16px;
         font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.5;
+        letter-spacing: normal;
+        color: rgb(0, 0, 0);
+      }
+      .authorContainer {
+        display: flex;
+        align-items: center;
+        .authorImage {
+          width: 18px;
+          height: 18px;
+          margin-right: 10px;
+        }
+        .authorInfo {
+          margin-right: 20px;
+          font-family: Lato;
+          font-size: 12px;
+          font-weight: normal;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: normal;
+          letter-spacing: normal;
+          text-align: center;
+          color: rgb(102, 102, 102);
+        }
+      }
+      .description {
+        font-family: Lato;
+        font-size: 15px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.53;
+        letter-spacing: normal;
+        color: #292929;
+      }
+    }
+    .toolSection {
+      width: 113px;
+      height: 90px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      .percent {
+        font-family: Lato;
+        font-size: 14px;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        padding: 7px 6px 6px;
+        border-radius: 5px;
+        border: solid 1px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+      }
+      .arrowButton {
+        border: 0;
+        background: none;
+        cursor: pointer;
+        margin: 0;
+        padding: 0;
+      }
+      .arrowIcon {
+        width: 13px;
+        height: 13px;
+        font-family: FontAwesome5Pro;
+        font-size: 12px;
+        font-weight: 300;
         font-stretch: normal;
         font-style: normal;
         line-height: normal;
         letter-spacing: normal;
         text-align: center;
-        color: rgb(102, 102, 102);
       }
-    }
-  }
-  .toolSection {
-    width: 113px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    .percent {
-      font-family: Lato;
-      font-size: 14px;
-      font-weight: bold;
-      font-stretch: normal;
-      font-style: normal;
-      line-height: normal;
-      letter-spacing: normal;
-      color: #4eb495;
-      padding: 7px 6px 6px;
-      border-radius: 5px;
-      border: solid 1px #4eb495;
-      -webkit-border-radius: 5px;
-      -moz-border-radius: 5px;
-      -ms-border-radius: 5px;
-      -o-border-radius: 5px;
-}
-    .arrowIcon {
-      width: 13px;
-      height: 13px;
-      font-family: FontAwesome5Pro;
-      font-size: 12px;
-      font-weight: 300;
-      font-stretch: normal;
-      font-style: normal;
-      line-height: normal;
-      letter-spacing: normal;
-      text-align: center;
     }
   }
 }

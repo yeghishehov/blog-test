@@ -1,0 +1,118 @@
+@import "./../../styles/global.scss";
+
+.root {
+  .buttonsContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 210px;
+  }
+  .button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    width: 100px;
+    height: 40px;
+    padding: 11px 13px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border: solid 1px #e0e0e0;
+    background-color: #fff;
+    &:active {
+      background: #eee;
+    }
+  }
+  .icon {
+    font-family: FontAwesome5Pro;
+    font-size: 18px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #3971c1;
+    fill: #3971c1;
+  }
+  .filtersContainer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: fit-content;
+    margin-top: 15px;
+    padding: 10px;
+    padding-bottom: 0;
+    background: #eee;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    .selectContainer {
+      display: flex;
+      flex-direction: column;
+      .select {
+        margin: 10px;
+        width: 172px;
+        height: 40px;
+        background-color: #fff;
+        border-radius: 3px;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        -ms-border-radius: 3px;
+        -o-border-radius: 3px;
+        padding: 10px;
+        padding-top: 0;
+        font-family: Lato;
+        font-size: 13px;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #292929;
+        cursor: pointer;
+      }
+      .label {
+        font-family: Lato;
+        font-size: 10px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.6;
+        letter-spacing: 0.5px;
+        color: #666666;
+        text-transform: uppercase;
+        position: relative;
+        left: 25px;
+        top: -27px;
+        pointer-events: none;
+      }
+    }
+  }
+  .reset {
+    margin: 10px;
+    margin-top: -5px;
+    width: 172px;
+    height: 40px;
+    background-color: #3971c1;
+    font-family: Lato;
+    font-size: 12px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.33;
+    letter-spacing: normal;
+    color: #fff;
+    cursor: pointer;
+    border: 0;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+}

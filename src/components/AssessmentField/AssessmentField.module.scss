@@ -1,0 +1,32 @@
+.container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 23px;
+  padding: 11px 20px;
+  border-radius: 3px;
+  box-shadow: 0 -1px 0 0 #e7e7e7;
+  background-color: #fff;
+  .button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    background: none;
+    border: none;
+    margin: 0 10px;
+    padding: 0;
+    font-family: Lato;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #292929;
+    .icon {
+      margin-right: 5px;
+      color: #292929;
+    }
+  }
+}
