@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { AiFillCaretDown } from "react-icons/ai";
+import { AiFillCaretDown, AiOutlineMenu } from "react-icons/ai";
 import logo from "./assets/logo-desktop.svg";
 import userImage from "./assets/user.png";
 import { Stories } from "./components/Stories";
@@ -42,7 +42,10 @@ export default function App() {
     <div className={classes.app}>
       <header className={classes.headerWrapper}>
         <div className={classes.header}>
-          <img src={logo} className={classes.logo} alt="logo" />
+          <div className={classes.menuContainer}>
+            <AiOutlineMenu className={classes.menuIcon} />
+            <img src={logo} className={classes.logo} alt="logo" />
+          </div>
           <div className={classes.userContainer}>
             <img src={userImage} className={classes.userImage} alt="User" />
             <AiFillCaretDown className={classes.arrowIcon} />

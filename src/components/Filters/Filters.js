@@ -42,7 +42,7 @@ export default function Filters({
       <div className={classes.buttonsContainer}>
         <button className={classes.button} onClick={handleRefresh}>
           <AiOutlineReload className={classes.icon} />
-          Refresh
+          <p>Refresh</p>
         </button>
         <button
           className={classes.button}
@@ -50,7 +50,7 @@ export default function Filters({
           onClick={toggleActive}
         >
           <FaFilter className={classes.icon} />
-          Filters
+          <p>Filters</p>
         </button>
       </div>
       {active ? (

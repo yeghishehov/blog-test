@@ -6,6 +6,9 @@
     justify-content: space-between;
     align-items: center;
     width: 210px;
+    @media (max-width: $breakpoint-mobile) {
+      width: 86px;
+    }
   }
   .button {
     display: flex;
@@ -25,6 +28,12 @@
     &:active {
       background: #eee;
     }
+    @media (max-width: $breakpoint-mobile) {
+      width: 40px;
+      p {
+        display: none;
+      }
+    }
   }
   .icon {
     font-family: FontAwesome5Pro;
@@ -36,6 +45,9 @@
     letter-spacing: normal;
     color: #3971c1;
     fill: #3971c1;
+    @media (max-width: $breakpoint-mobile) {
+      width: 16px;
+    }
   }
   .filtersContainer {
     display: flex;
@@ -51,9 +63,17 @@
     -moz-border-radius: 3px;
     -ms-border-radius: 3px;
     -o-border-radius: 3px;
+    @media (max-width: $breakpoint-mobile) {
+      flex-direction: column;
+      width: 93%;
+      background: #fff;
+    }
     .selectContainer {
       display: flex;
       flex-direction: column;
+      @media (max-width: $breakpoint-mobile) {
+        width: 100%;
+      }
       .select {
         margin: 10px;
         width: 172px;
@@ -75,6 +95,11 @@
         letter-spacing: normal;
         color: #292929;
         cursor: pointer;
+        @media (max-width: $breakpoint-mobile) {
+          width: 100%;
+          margin: 0;
+          border: 0;
+        }
       }
       .label {
         font-family: Lato;
@@ -90,6 +115,10 @@
         left: 25px;
         top: -27px;
         pointer-events: none;
+        @media (max-width: $breakpoint-mobile) {
+          top: -15px;
+          left: 15px;
+        }
       }
     }
   }
@@ -114,5 +143,8 @@
     -moz-border-radius: 3px;
     -ms-border-radius: 3px;
     -o-border-radius: 3px;
-}
+    @media (max-width: $breakpoint-mobile) {
+      display: none;
+    }
+  }
 }
