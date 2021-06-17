@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { AiOutlineReload } from "react-icons/ai";
 import { FaFilter } from "react-icons/fa";
+import { FilterLang } from './../FilterLang';
+import { FilterItem } from '../FilterItem';
 
 import classes from "./Filters.module.scss";
 
@@ -13,12 +15,22 @@ export default function Filters({
 }) {
   const [active, setActive] = useState(false);
 
+  const orders = [
+    { value: "top", label: "Top Rated" },
+    { value: "latest", label: "latest" },
+    { value: "retweeted", label: "Most Read" },
+    { value: "read", label: "Popular" },
+  ];
+
+  const minutes = [
+    { value: 10 * 1000, label: "10 sec" },
+    { value: 30 * 1000, label: "30 sec" },
+    { value: 60 * 1000, label: "1 min" },
+    { value: 10 * 60 * 1000, label: "10 min" },
+  ];
+
   const toggleActive = () => {
     setActive((state) => !state);
-  };
-
-  const handleChange = (e) => {
-    setForm((state) => ({ ...state, [e.target.name]: e.target.value }));
   };
 
   const handleRefresh = () => {
@@ -32,7 +44,7 @@ export default function Filters({
     setForm({
       refreshTime: 60 * 1000,
       order: "top",
-      language: "en",
+      language: [],
       limit: 10,
     });
   };
@@ -55,60 +67,9 @@ export default function Filters({
       </div>
       {active ? (
         <div className={classes.filtersContainer}>
-          <div className={classes.selectContainer}>
-            <select
-              className={classes.select}
-              id="Autorefresh"
-              name="refreshTime"
-              value={form.refreshTime}
-              onChange={handleChange}
-            >
-              <option value={10 * 1000}>10 sec</option>
-              <option value={30 * 1000}>30 sec</option>
-              <option value={60 * 1000}>1 min</option>
-              <option value={10 * 60 * 1000}>10 min</option>
-            </select>
-            <label className={classes.label} htmlFor="Autorefresh">
-              Autorefresh
-            </label>
-          </div>
-
-          <div className={classes.selectContainer}>
-            <select
-              className={classes.select}
-              id="Order"
-              name="order"
-              value={form.order}
-              onChange={handleChange}
-            >
-              <option value="top">Top Rated</option>
-              <option value="latest">Latest</option>
-              <option value="retweeted">Most Read</option>
-              <option value="read">Popular</option>
-            </select>
-            <label className={classes.label} htmlFor="Order">
-              Order
-            </label>
-          </div>
-
-          <div className={classes.selectContainer}>
-            <select
-              className={classes.select}
-              id="Languages"
-              name="language"
-              value={form.language}
-              onChange={handleChange}
-            >
-              <option value="en">English</option>
-              <option value="de">German</option>
-              <option value="zh">Chinese</option>
-              <option value="it">Italian</option>
-            </select>
-            <label className={classes.label} htmlFor="Languages">
-              Languages
-            </label>
-          </div>
-
+          <FilterItem form={form} setForm={setForm} options={minutes} formKey="refreshTime" label="Autorefresh" />
+          <FilterItem form={form} setForm={setForm} options={orders} formKey="order" label="Order" />
+          <FilterLang form={form} setForm={setForm} />
           <button className={classes.reset} onClick={handleReset}>
             RESET
           </button>

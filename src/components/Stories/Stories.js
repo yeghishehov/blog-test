@@ -15,7 +15,11 @@ export default function Stories({
   const [loading, setLoading] = useState(true);
 
   const getData = async () => {
-    const stories = await getAllStories({ ...form, limit: 10 });
+    const stories = await getAllStories({
+      ...form,
+      limit: 10,
+      language: form.language?.filter((lang) => lang !== 'all')
+    });
     setForm((state) => ({
       ...state,
       limit: state.limit + 10,
@@ -27,11 +31,18 @@ export default function Stories({
   };
 
   const getDataRefresh = async () => {
-    const stories = await getAllStories(form);  
+    const stories = await getAllStories({
+      ...form,
+      language: form.language?.filter((lang) => lang !== 'all')
+    });  
     if (stories.error) {
       window.scrollTo(0, 0);
       setForm((state) => ({ ...state, limit: 10 }));
-      const storiesReload = await getAllStories({ ...form, limit: 10 });
+      const storiesReload = await getAllStories({
+        ...form,
+        limit: 10,
+        language: form.language?.filter((lang) => lang !== 'all')
+      });
       setData(storiesReload);
     } else {
       setData(stories);

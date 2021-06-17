@@ -13,7 +13,7 @@ export default function App() {
   const [form, setForm] = useState({
     refreshTime: 60 * 1000,
     order: "top",
-    language: "en",
+    language: [],
     limit: 10,
     isFirstRun: true,
   });
